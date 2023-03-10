@@ -35,22 +35,6 @@ def calculate():
                 equation = ""
     label_result.config(text=result)
 
-    def append_operator(self, operator):
-        check_current_expression = self.current_expression + operator
-        
-        if check_current_expression[:-1].isdigit():
-            self.current_expression += operator
-            self.total_expression += self.current_expression
-            self.current_expression =""
-            self.update_total_label()
-            self.update_label() 
-        else:
-            self.total_exxpression += self.current_expression
-            self.current_expression =""
-            self.update_total_label()
-            self.update_label()
-
-
 label_result= Label(root,width=30, height=3, text="",font=("arial",30)) #layar kalkulator
 label_result.pack()
 
